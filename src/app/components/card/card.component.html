@@ -1,0 +1,25 @@
+<div class="cardo d-flex">
+<h1 class="mt-1">{{servi.datos.main.temp.toFixed()  }}º</h1>
+<div class="mx-2 mt-3">
+<h2 class="mx-5">{{servi.datos.name}}</h2>
+<h5> <span>{{hora}}</span>  - <span>{{nameDay}}</span> <span>{{day}}</span> <span>{{month}}</span> </h5>
+</div>
+<div>
+<div *ngIf="servi.datos.weather[0].main==='Clouds'
+         || servi.datos.weather[0].main==='Mist'
+         || servi.datos.weather[0].main==='Smoke'
+         || servi.datos.weather[0].main==='Haze'
+         || servi.datos.weather[0].main==='Dust'
+         || servi.datos.weather[0].main==='Fog'
+         || servi.datos.weather[0].main==='Sand'
+         || servi.datos.weather[0].main==='Ash'
+         || servi.datos.weather[0].main==='Squall'
+         || servi.datos.weather[0].main==='Tornado'"
+class="d-flex d flex-column"><i class="fa-cloud fa-3x fa-solid" ></i><span>Clouds</span></div>
+<div  *ngIf="servi.datos.weather[0].main==='Clear'" class="d-flex d flex-column"><i class="fa-sun fa-3x fa-solid"  ></i> <span >Clear</span> </div>
+<div  *ngIf="servi.datos.weather[0].main==='Rain' || servi.datos.weather[0].main==='Drizzle'" class="d-flex d flex-column"><i class="fa-cloud-rain fa-3x fa-solid"  ></i><span > Rain</span></div>
+<div  *ngIf="servi.datos.weather[0].main==='Snow'" class="d-flex d flex-column"><i class="fa-regular fa-snowflake fa-3x"  ></i><span  >Snow</span></div>
+<div  *ngIf="servi.datos.weather[0].main==='Thunderstorm'" class="d-flex d flex-column"><i class="fa-cloud-bolt fa-3x fa-solid"></i><span >Thunderstorm</span></div>
+
+
+</div>

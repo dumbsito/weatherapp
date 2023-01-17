@@ -1,0 +1,84 @@
+.dash{
+    color:rgb(255, 254, 254);
+    background-color:#1a1a1a;
+    font-weight: 400;
+    opacity: .50;
+    width: 29.5vw;
+    height: 100vh;
+  float: right;
+  backdrop-filter: blur(10px);
+  
+     input{
+       outline: none !important;
+      border: none !important;
+     margin-top: 20px !important;
+        padding: 10px;
+        width: 50%;
+         font-size: 17px;
+        color: silver;
+        background: transparent;
+
+     }
+
+li{
+  list-style: none;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-left: 25px;
+
+
+span{
+margin-left: 15rem;}  
+}
+ h5{
+  margin-left: 55px;
+  margin-top: -10px;
+  color: white;
+  font-size: 17px;
+ }
+}
+
+i{
+    color: white;
+}
+
+.spacer{
+    height: 0.1px;
+    width: 74%;
+
+  margin: 10px auto;
+  margin-right: 50px;
+  margin-bottom: 40px;
+   background: silver;
+}
+.sp2{
+  margin-top: 35px;
+}
+
+.li{
+  margin-top: -5px;
+
+  .uno{
+    margin-left: 200px;
+
+  }
+  .dos{
+    margin-left: 190px;
+  }
+  
+
+  b{
+    margin-top: 25px;
+  }
+}
+.fa-magnifying-glass{
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
+}

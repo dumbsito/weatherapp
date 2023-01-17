@@ -1,0 +1,41 @@
+<div class="dash">
+    <form (ngSubmit)="onSubmit()">
+        <input name="enter" placeholder="Enter Location..." class="mt-3 mx-5" [(ngModel)]="city">
+     <button type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+    </form>
+  
+ 
+    <div class="spacer"></div>
+
+    <div class="list ">
+        <ul>
+     <li (click)="redirect(telAviv)">Tel Aviv</li>
+     <li (click)="redirect(newYork)">New York</li>
+     <li (click)="redirect(tokyo)">  Tokyo</li>
+     <li (click)="redirect(paris)">  Paris</li>
+    </ul>
+    </div>
+
+    <div class="spacer sp2"></div>
+
+    <div class="details">
+          
+        <h5>Weather Details</h5>
+        <div class="d-flex">
+        <ul >
+            <li>Country </li>
+            <li>Humidity </li>
+            <li>Wind </li>
+            <li>Feels Like </li>
+        </ul>
+        <div class="d-flex flex-column resultados li">
+        <b class="uno">{{servi.datos.sys.country}}</b>
+        <b class="uno">{{servi.datos.main.humidity}}</b>
+        <b class="dos">{{servi.datos.wind.speed}}</b>
+        <b class="dos">{{servi.datos.main.feels_like}}</b>
+    </div>
+</div>
+    </div>
+
+    <div class="spacer "></div>
+</div>
