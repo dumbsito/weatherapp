@@ -11,25 +11,25 @@ export class DashboardComponent implements OnInit {
 city:string=""
 @Output() onBoolean=new EventEmitter<any>()
 bulean:boolean=false
-  constructor(public servi:ServiceService){
+  constructor(public weatherService:ServiceService){
  
 
   }
   ngOnInit(): void {
-  this.servi.getData("rome").subscribe(data=>{
-    this.servi.datos=data;
+  this.weatherService.getData("rome").subscribe(data=>{
+    this.weatherService.datos=data;
   })
   
   }
 
   onSubmit(){
-    this.servi.getData(this.city).subscribe(data=>{
+    this.weatherService.getData(this.city).subscribe(data=>{
    
       
       this.bulean=true
     this.onBoolean.emit(this.bulean)
       
-this.servi.datos=data
+this.weatherService.datos=data
 
     })
 
@@ -41,13 +41,13 @@ this.servi.datos=data
   tokyo:string="Tokyo"
   paris:string="Paris"
   redirect(query:string){
-    this.servi.getData(query).subscribe(data=>{
+    this.weatherService.getData(query).subscribe(data=>{
       console.log(data);
       
       this.bulean=true
     this.onBoolean.emit(this.bulean)
       
-this.servi.datos=data
+this.weatherService.datos=data
 
     })
 

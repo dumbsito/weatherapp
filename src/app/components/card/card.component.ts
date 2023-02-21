@@ -14,7 +14,7 @@ year:number=0
 month:string=""
 nameDay:string=""
 hora:string=""
-  constructor(public servi:ServiceService){
+  constructor(public weatherService:ServiceService){
 
   }
   ngOnInit(): void {
